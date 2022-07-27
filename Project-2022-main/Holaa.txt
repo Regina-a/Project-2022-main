@@ -1,0 +1,9 @@
+To Do
+Ruleta
+Api back, para las opciones de palabras: Persona, accion y predicado
+Canvas y funcion de borrar
+Pixel art y funcion de borrar
+Save como img el dibujo 
+Subir el dibujo a la pagina de galeria
+log in para tener un apodo bajo tu dibujo 
+Diseno de pagina

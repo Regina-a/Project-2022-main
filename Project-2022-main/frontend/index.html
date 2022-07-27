@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="./drawrt.png" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawrt</title>
+<link rel="stylesheet" href="css1.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Titan+One&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body class="colorin">
+  
+  <div class="navbar-container">
+  <ul class="nav d-flex justify-content-center">
+    <li class="nav-item" >
+    <a class="nav-link active" id="home" href="./pagPrincipal.html" onclick="home()">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" id="gallery" href="./galeria.html" onclick="gallery()">Gallery</a>
+    </li>
+    <a href="./pagPrincipal.html"><img class='move' src="./drawrt.png" alt=""></a>
+    <li class="nav-item">
+    <a class="nav-link" id="draw" href="./index.html" onclick="draw()">Draw</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" id="pixel" href="./pixel.html" onclick="pixel()">Pixel</a>
+    </li>
+  </ul>
+</div>  
+
+
+
+<!-- Inicia div canvas -->
+<div id="drawW" class="contenedorCanvasPrincipal">
+  <br>
+  <!-- lienzo -->
+  <canvas id="canvas" class="canva" width="500px" height="500px"> </canvas>
+  <br>  
+  <div class="derecha">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- color -->
+      <input type="color" name="" id="color" oninput="defcolor(this.value)";>
+      <!-- grosor -->
+      <input type="range" id="grosor" oninput="defgrosor(this.value)" min="1" max="10" value="1">
+      <!-- guardar function -->
+      <button onclick="convertCanvasToImage()" class="osos"> Save</button>
+      <!-- borrador -->
+      <a onclick='erase()'> <img src="./icono.jpg" alt="" width="40px" height="40px"></a> 
+      <!-- inspo -->
+      <button type="button" class="ewe" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Inspo
+      </button>
+      
+    </nav>
+    <!-- Fin navbar -->
+    <!-- Inputs -->
+    <div  class="acomodo">
+      <br>
+      <h5>Press ctrl+z to delete your most recent changes</h5>
+      <input id="autor" type="text" placeholder="Author" value="">
+      <!-- <p id="infoAutor"></p> -->
+      <br>
+      <div>
+      <input id="infoDibujo" class="anchoInput" type="text" placeholder="Info. of the drawing">
+      <!-- <p id="infodesc"></p> -->
+      <button onclick="saveDynamicDataToFile()" class="osos osos2"> Save Drawing info</button>
+
+    </div>
+    </div>
+    <!-- Fin inputs -->
+    
+    </div>      
+</div>
+<!-- Fin div canvas -->
+
+       
+  
+  <!-- Modal -->
+  <div
+  class="modal fade position-modal"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inspo</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="textInspo">Looking for inspiration for your drawings? Check this out!</h3>
+
+        <div class="modalContainer">
+          <div class="divWords divContainer d-flex justify-content-center flex-column">
+            <h1>WORDS</h1>
+              <button id="buttonWords" onclick="response()">
+                Random word
+              </button>
+            <div id="respuesta" ></div>
+          </div>
+
+          <div class="divImages divContainer d-flex justify-content-center flex-column">
+            <h1>IMAGES</h1>
+            <button id="buttonImages" onclick="images2()">
+              Random Image
+            </button>
+              <img id="image1" src="" alt="" />
+          </div>
+
+
+          <div class="divSentences divContainer d-flex justify-content-center flex-column">
+            <h1>SENTENCES</h1>
+            <button id="buttonSentences" onclick="oracion()">
+              Random sentence
+            </button>
+            <div id="oracion"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+       
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="./canva.js"></script>
+    <script src="inspo.js"></script>
+ 
+</body>
+</html>

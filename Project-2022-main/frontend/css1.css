@@ -1,0 +1,276 @@
+.colorin{
+    background-color: #FD668B;
+
+}
+body{
+    /* background-color: rgb(25, 222, 166); */
+    text-align: center;
+    font-family: "Raleway" , sans-serif;
+    font-weight: bold;
+    width: 100%;
+    background-color: #FD668B;
+
+    /* background-color: #FD668B; */
+    /* height: 100%; */
+}
+
+#oracion, #respuesta{
+        font-weight: bold;
+    }
+/* contenedor principal */
+.contenedorCanvasPrincipal{
+    display: flex;
+     /* justify-content: center; */
+    align-items: center; 
+    text-align: center;
+    margin-top: 2%;
+    font-family: "Raleway" , sans-serif;
+    font-weight: bold;
+    width: 300px;
+    /* top: 2%; */
+}
+
+/* propiedades DRAW */
+.canva{
+    border:1px solid black;
+    background-color: white;
+    margin-left: 100px;
+
+}
+
+.size{
+    height: 150px;
+    width: 150px;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+#color{
+    width: 100px;
+    height: 100px;
+    border: none;
+    /* border-radius: 100%; */
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#color::-webkit-color-swatch{
+    border-radius: 50%;
+    border: 5px rgb(227, 227, 227) solid ;
+}
+
+/* navbar */
+.navbar{
+    background-color: #000;
+    border-radius: 5px;
+    /* margin-left: 3.5em;
+    margin-right: 100px; */
+    margin-left: 4em;
+    margin-right: 4em;
+    /* padding: 30px; */
+    width: 550px;
+    align-items: center;
+     justify-content: space-around !important;
+    display: flex;
+    float: right;
+    margin-bottom:20px ;
+
+        /* flex-wrap: wrap; */
+    /* z-index:1; */
+
+    
+    
+}
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    background-color: #a2a2a2;
+    /* padding-left: 90px ; */
+    /* padding-right: 90px ; */
+}
+/* propiedades GALLERY */
+.yes{
+text-align: center;
+}
+
+.derecha{
+    float: right;
+}
+
+/*navegador fijo*/
+.navegador-fijo{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+header , nav {
+  width: 100%;
+  position: center;
+  z-index: 10;
+  float: center;
+  text-align: center;
+}
+
+nav {
+  float: center; /* Desplazamos el nav hacia el centro */
+  justify-content: center;
+  position: fixed;
+  width: 50%;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-link{
+    border-radius: 12rem;
+}
+
+li {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* background colors */
+#home:hover,#gallery:hover,#draw:hover,#pixel:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+#home , #homeE{
+    background-color: rgb(146, 188, 255);
+    color: #000;
+}
+
+#gallery , #galleryY{
+    background-color: rgb(255, 214, 57);
+    color: #000;
+}
+
+#draw , #drawW{
+     background-color: #FD668B; 
+    color: #000;
+}
+#drawW{
+    height: 90vh;
+}
+
+#pixel , #pixelL{
+    background-color: #30D95D;
+    color: #000;
+}
+.osos{
+background-color:rgb(255, 200, 251);
+border-radius: 30px;
+width: 80px;
+font-family: 'Shrikhand', cursive;;
+}
+.osos2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.ewe{
+    width: 70px;
+    font-family: 'Titan One', cursive;
+    color: lavenderblush;
+    background-color: blueviolet;
+    border-radius: 30px;
+
+}
+.move{
+    
+    border-radius: 0%;
+    width: 70px;
+    height: 50px;
+
+}
+.modal-body{
+    background-color: #ee9ccc;
+}
+
+.modalContainer{
+    display: flex;
+    /* position: relative; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 992px){
+.modal-lg, .modal-xl {
+    --bs-modal-width: 1000px;
+}}
+
+.position-modal{
+    top: 64px;
+}
+
+.textInspo, h1{
+    text-align: center;
+}
+
+.divContainer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 33%;
+    /* justify-content: space-evenly; */
+    text-align: center;
+    border-radius: 20px;
+    /* float: center; */
+    /* align-content: column; */
+    /* position: relative; */
+}
+
+.divWords{
+    background-color: #f62285; 
+    /* position: relative;  */
+}
+
+.divImages{
+    background-color: #ff4a9f;
+    /* position: relative; */
+}
+
+.divSentences{
+    background-color: #ff60aa;
+    /* position: relative; */
+}
+
+#buttonWords, #buttonImages, #buttonSentences{
+    background-color: #ff7bb8;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    position: relative;
+    align-items: center;
+    /* width: 100%; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.acomodo{
+    /* float:right; */
+    margin-top: 0px;
+    /* z-index:1; */
+    margin-right:410px ;
+    margin-left: 40px;
+    /* margin-bottom: ; */
+    flex-wrap:wrap;
+}
